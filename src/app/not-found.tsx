@@ -28,10 +28,10 @@ const DecorativeElements = () => (
 
 const NotFoundTitle = () => (
   <div className="relative">
-    <h1 className="animate-text-gradient bg-gradient-to-r from-primary via-secondary to-primary bg-[200%_auto] bg-clip-text text-8xl font-extrabold text-transparent sm:text-9xl">
+    <h1 className="animate-text-gradient bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 bg-[length:200%_auto] bg-clip-text text-8xl font-extrabold text-transparent sm:text-9xl">
       404
     </h1>
-    <div className="absolute -bottom-2 left-1/2 h-1 w-40 -translate-x-1/2 bg-gradient-to-r from-transparent via-primary/50 to-transparent blur-sm" />
+    <div className="absolute -bottom-2 left-1/2 h-1 w-40 -translate-x-1/2 bg-gradient-to-r from-transparent via-blue-400/50 to-transparent blur-sm" />
   </div>
 );
 
@@ -39,12 +39,13 @@ const HomeButton = () => (
   <Button
     asChild
     size="lg"
-    className="group relative overflow-hidden rounded-full px-8 transition-all duration-300 hover:shadow-[0_0_20px_rgba(var(--primary),.4)]"
+    variant="outline"
+    className="group relative bg-background/5 backdrop-blur-sm transition-all duration-300 hover:bg-background/10 hover:shadow-[0_0_20px_rgba(96,165,250,0.2)]"
   >
     <Link href={ROUTES.HOME}>
       <span className="relative flex items-center gap-2">
-        <HomeIcon className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5" />
-        <span className="transition-transform duration-300 group-hover:-translate-y-0.5">
+        <HomeIcon className="size-4 transition-colors duration-300" />
+        <span className="transition-colors duration-300">
           Return Home
         </span>
       </span>

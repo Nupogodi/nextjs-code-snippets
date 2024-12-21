@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { siteConfig } from '@/constants/metadata';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://nextjs-code-snippets-psi.vercel.app/sitemap.xml',
+    sitemap: `${siteConfig.url}/sitemap.xml`,
   };
 }
