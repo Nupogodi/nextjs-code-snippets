@@ -32,50 +32,119 @@ export async function GET(request: Request) {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: 'white',
+            // Navy blue gradient background
+            background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%)',
             padding: '40px 80px',
             fontFamily: 'system-ui',
           }}
         >
+          {/* Decorative elements */}
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              right: 0,
+              width: '300px',
+              height: '300px',
+              background: 'radial-gradient(circle at center, #60a5fa33 0%, transparent 70%)',
+              opacity: 0.8,
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              width: '250px',
+              height: '250px',
+              background: 'radial-gradient(circle at center, #60a5fa22 0%, transparent 70%)',
+              opacity: 0.6,
+            }}
+          />
+
+          {/* Content container with glass effect */}
           <div
             style={{
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              marginBottom: '20px',
+              padding: '40px',
+              background: 'rgba(255, 255, 255, 0.05)',
+              backdropFilter: 'blur(10px)',
+              borderRadius: '20px',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              boxShadow: '0 8px 32px 0 rgba(15, 23, 42, 0.3)',
+              maxWidth: '900px',
             }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={logoBase64}
-              alt="Logo"
-              width="64"
-              height="64"
-            />
+            {/* Logo */}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '24px',
+                background: 'rgba(255, 255, 255, 0.08)',
+                padding: '12px',
+                borderRadius: '12px',
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={logoBase64}
+                alt="Logo"
+                width="48"
+                height="48"
+                style={{
+                  filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2))',
+                }}
+              />
+            </div>
+
+            {/* Title */}
+            <div
+              style={{
+                fontSize: 56,
+                fontWeight: 800,
+                letterSpacing: '-0.025em',
+                lineHeight: 1.2,
+                textAlign: 'center',
+                marginBottom: '16px',
+                color: '#ffffff',
+                textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+              }}
+            >
+              {title}
+            </div>
+
+            {/* Description */}
+            <div
+              style={{
+                fontSize: 28,
+                color: 'rgba(255, 255, 255, 0.9)',
+                marginTop: 8,
+                textAlign: 'center',
+                maxWidth: '700px',
+                lineHeight: 1.4,
+                textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)',
+              }}
+            >
+              {description}
+            </div>
           </div>
+
+          {/* Site URL at bottom */}
           <div
             style={{
-              fontSize: 60,
-              fontWeight: 800,
-              letterSpacing: '-0.025em',
-              lineHeight: 1.2,
-              textAlign: 'center',
-              marginBottom: '20px',
-              color: '#000',
+              position: 'absolute',
+              bottom: '24px',
+              color: 'rgba(255, 255, 255, 0.7)',
+              fontSize: '16px',
+              fontWeight: 500,
             }}
           >
-            {title}
-          </div>
-          <div
-            style={{
-              fontSize: 30,
-              color: 'rgb(107 114 128)',
-              marginTop: 8,
-              textAlign: 'center',
-              maxWidth: '800px', // Limit width for better readability
-            }}
-          >
-            {description}
+            {SITE_CONFIG.url.replace('https://', '')}
           </div>
         </div>
       ),
@@ -96,9 +165,10 @@ export async function GET(request: Request) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: 'white',
+            background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%)',
             fontSize: 32,
             fontFamily: 'system-ui',
+            color: '#ffffff',
           }}
         >
           {SITE_CONFIG.name}
