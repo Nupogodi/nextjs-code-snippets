@@ -6,7 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check-types": "tsc --noEmit --pretty",
+    "check-types:fix": "tsc --noEmit --pretty --fix"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -19,12 +24,21 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^3.12.0",
+    "@eslint-react/eslint-plugin": "^1.21.0",
     "@eslint/eslintrc": "^3",
+    "@next/eslint-plugin-next": "^15.1.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.2",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^15.1.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-format": "^0.1.3",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "eslint-plugin-tailwindcss": "^3.17.5",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
