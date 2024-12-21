@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
+import { SITE_CONFIG } from '@/config/site';
+import generateMetadata from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Documentation | Next.js Code Collection',
-  description:
-    'Comprehensive documentation for components, hooks, and utilities in our Next.js code collection.',
-  openGraph: {
-    title: 'Documentation | Next.js Code Collection',
-    description:
-      'Comprehensive documentation for components, hooks, and utilities in our Next.js code collection.',
-    type: 'website',
-    url: '/docs',
-  },
-};
+export const metadata: Metadata = generateMetadata({
+  title: `Documentation | ${SITE_CONFIG.name}`,
+  description: 'Comprehensive documentation for components, hooks, and utilities.',
+  keywords: [
+    'next.js',
+    'react',
+    'typescript',
+    'shadcn/ui',
+    'web development',
+  ],
+});
 
 export default function DocsPage() {
   return (

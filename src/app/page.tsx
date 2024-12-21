@@ -1,19 +1,19 @@
 import type { Metadata } from 'next';
+import { SITE_CONFIG } from '@/config/site';
 import { ButtonExample } from '@/examples/components/button-example';
+import generateMetadata from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Next.js Code Collection',
+export const metadata: Metadata = generateMetadata({
+  title: `${SITE_CONFIG.name}`,
   description: 'A collection of reusable Next.js components and utilities.',
-  keywords: ['Next.js', 'React', 'TypeScript', 'TailwindCSS', 'Shadcn', 'UI', 'Components', 'Hooks', 'Utilities'],
-  openGraph: {
-    title: 'Next.js Code Collection',
-    description: 'A collection of reusable Next.js components and utilities.',
-    url: 'https://nextjs-code-snippets-psi.vercel.app/',
-    siteName: 'Next.js Code Collection',
-    locale: 'en_US',
-    type: 'website',
-  },
-};
+  keywords: [
+    'next.js',
+    'react',
+    'typescript',
+    'shadcn/ui',
+    'web development',
+  ],
+});
 
 export default function Home() {
   return (

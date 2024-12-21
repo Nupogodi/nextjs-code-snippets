@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
+import { SITE_CONFIG } from '@/config/site';
+import generateMetadata from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Examples | Next.js Code Collection',
+export const metadata: Metadata = generateMetadata({
+  title: `Examples | ${SITE_CONFIG.name}`,
   description:
     'Real-world examples and implementations of components, hooks, and patterns.',
-  openGraph: {
-    title: 'Examples | Next.js Code Collection',
-    description:
-      'Real-world examples and implementations of components, hooks, and patterns.',
-    type: 'website',
-    url: '/examples',
-  },
-};
+  keywords: [
+    'next.js',
+    'react',
+    'typescript',
+    'shadcn/ui',
+    'web development',
+  ],
+});
 
 export default function ExamplesPage() {
   return (
