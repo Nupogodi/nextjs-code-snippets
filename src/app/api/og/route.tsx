@@ -69,13 +69,15 @@ export async function GET(request: Request) {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              padding: '40px',
+              padding: '60px',
               background: 'rgba(255, 255, 255, 0.05)',
               backdropFilter: 'blur(10px)',
-              borderRadius: '20px',
+              borderRadius: '24px',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               boxShadow: '0 8px 32px 0 rgba(15, 23, 42, 0.3)',
-              maxWidth: '900px',
+              maxWidth: '1000px',
+              width: '90%',
+              margin: '40px',
             }}
           >
             {/* Logo */}
@@ -84,10 +86,10 @@ export async function GET(request: Request) {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '24px',
+                marginBottom: '32px',
                 background: 'rgba(255, 255, 255, 0.08)',
-                padding: '12px',
-                borderRadius: '12px',
+                padding: '16px',
+                borderRadius: '14px',
               }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -105,14 +107,15 @@ export async function GET(request: Request) {
             {/* Title */}
             <div
               style={{
-                fontSize: 56,
+                fontSize: 64,
                 fontWeight: 800,
                 letterSpacing: '-0.025em',
                 lineHeight: 1.2,
                 textAlign: 'center',
-                marginBottom: '16px',
+                marginBottom: '24px',
                 color: '#ffffff',
                 textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+                padding: '0 20px',
               }}
             >
               {title}
@@ -121,13 +124,14 @@ export async function GET(request: Request) {
             {/* Description */}
             <div
               style={{
-                fontSize: 28,
+                fontSize: 32,
                 color: 'rgba(255, 255, 255, 0.9)',
-                marginTop: 8,
+                marginTop: 16,
                 textAlign: 'center',
-                maxWidth: '700px',
+                maxWidth: '800px',
                 lineHeight: 1.4,
                 textShadow: '0 1px 2px rgba(0, 0, 0, 0.2)',
+                padding: '0 20px',
               }}
             >
               {description}
@@ -138,10 +142,13 @@ export async function GET(request: Request) {
           <div
             style={{
               position: 'absolute',
-              bottom: '24px',
+              bottom: '32px',
               color: 'rgba(255, 255, 255, 0.7)',
-              fontSize: '16px',
+              fontSize: '18px',
               fontWeight: 500,
+              padding: '8px 16px',
+              background: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: '8px',
             }}
           >
             {SITE_CONFIG.url.replace('https://', '')}
