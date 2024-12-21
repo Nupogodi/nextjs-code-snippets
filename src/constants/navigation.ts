@@ -1,6 +1,7 @@
+import type { MainNavItem } from '@/types/navigation';
 import { ROUTES } from './routes';
 
-export const MAIN_NAV = [
+export const MAIN_NAV: readonly MainNavItem[] = [
   {
     title: 'Documentation',
     href: ROUTES.DOCS.ROOT,
@@ -65,5 +66,3 @@ export const MAIN_NAV = [
     ],
   },
 ] as const;
-
-export type MainNavItem = (typeof MAIN_NAV)[number];
