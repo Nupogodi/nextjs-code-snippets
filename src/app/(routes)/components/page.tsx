@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
+import { SITE_CONFIG } from '@/config/site';
+import generateMetadata from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Components | Next.js Code Collection',
+export const metadata: Metadata = generateMetadata({
+  title: `Components | ${SITE_CONFIG.name}`,
   description:
     'A collection of reusable UI components built with shadcn/ui and Next.js.',
-  openGraph: {
-    title: 'Components | Next.js Code Collection',
-    description:
-      'A collection of reusable UI components built with shadcn/ui and Next.js.',
-    type: 'website',
-    url: '/components',
-  },
-};
+  keywords: [
+    'ui components',
+    'shadcn components',
+    'react components',
+    'next.js components',
+    'component library',
+  ],
+});
 
 export default function ComponentsPage() {
   return (
