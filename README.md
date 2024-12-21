@@ -51,7 +51,7 @@ docs/                     # Documentation and usage examples
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/nextjs-code-collection.git
+git clone git@github.com:Nupogodi/nextjs-code-snippets.git
 ```
 
 2. Install dependencies:

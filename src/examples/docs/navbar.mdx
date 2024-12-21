@@ -1,0 +1,92 @@
+# Navbar Component
+
+A responsive navigation bar component that provides consistent navigation across the application.
+
+## Features
+
+- Responsive design
+- Mobile-friendly
+- Sticky positioning
+- Backdrop blur effect
+- GitHub link
+- Mobile menu toggle
+- Accessible navigation
+
+## Usage
+
+```tsx
+import { Navbar } from "@/components/layout/navbar";
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Navbar />
+      <main>{children}</main>
+    </>
+  );
+}
+```
+
+## Props
+
+The Navbar component currently doesn't accept any props as it's a self-contained component.
+
+## Styling
+
+The component uses Tailwind CSS for styling with the following key features:
+
+- Sticky positioning with backdrop blur
+- Responsive layout using Flexbox
+- Mobile-first design approach
+- Uses theme colors from your design system
+- Smooth hover transitions
+
+## Accessibility
+
+- Proper ARIA labels for interactive elements
+- Semantic HTML structure
+- Screen reader friendly
+- Keyboard navigation support
+
+## Mobile Considerations
+
+- Collapsible menu for mobile devices
+- Touch-friendly tap targets
+- Responsive spacing
+- Proper viewport handling
+
+## Best Practices
+
+1. Place the Navbar at the root layout level
+2. Ensure consistent navigation across all pages
+3. Keep navigation items concise and clear
+4. Maintain proper spacing for touch targets
+5. Use semantic HTML elements
+
+## Example Implementation
+
+```tsx
+// Full example with mobile menu
+import { useState } from "react";
+import { Navbar } from "@/components/layout/navbar";
+
+export function Layout({ children }: { children: React.ReactNode }) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1">{children}</main>
+    </div>
+  );
+}
+```
+
+## Customization
+
+The Navbar can be customized through:
+
+1. Tailwind classes
+2. Theme variables
+3. Adding/removing navigation items
+4. Modifying the mobile menu behavior 

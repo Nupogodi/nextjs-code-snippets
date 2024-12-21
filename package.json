@@ -1,7 +1,26 @@
 {
   "name": "nextjs-code-snippets",
   "version": "0.1.0",
-  "private": true,
+  "description": "A collection of reusable Next.js components, hooks, and utilities",
+  "author": {
+    "name": "Alex Sherbin",
+    "url": "https://github.com/Nupogodi"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nupogodi/nextjs-code-snippets"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "shadcn-ui",
+    "components",
+    "hooks",
+    "utilities"
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -14,6 +33,7 @@
     "check-types:fix": "tsc --noEmit --pretty --fix"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.469.0",
