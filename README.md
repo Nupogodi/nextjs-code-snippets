@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Code Collection 🚀
 
-## Getting Started
+A carefully curated collection of reusable Next.js components, hooks, and utilities following modern best practices. Built with Next.js 14+, TypeScript, Tailwind CSS, and shadcn/ui.
 
-First, run the development server:
+## 📚 Collection Contents
 
+- **Components**: Reusable UI components built with shadcn/ui
+- **Hooks**: Custom React hooks for common functionality
+- **Layouts**: Page layouts and composition patterns
+- **Utils**: Helper functions and utility code
+- **Animations**: Framer Motion animations and transitions
+- **API**: API route handlers and middleware examples
+- **Forms**: Form validation and handling patterns
+- **Auth**: Authentication implementations
+- **Data Fetching**: Server and client data fetching patterns
+
+## 🛠️ Tech Stack
+
+- [Next.js 15+](https://nextjs.org/) - React Framework
+- [TypeScript](https://www.typescriptlang.org/) - Type Safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [shadcn/ui](https://ui.shadcn.com/) - UI Components
+- [React Hook Form](https://react-hook-form.com/) - Form Handling
+- [Zod](https://zod.dev/) - Schema Validation
+- [Framer Motion](https://www.framer.com/motion/) - Animations
+
+## 📁 Repository Structure
+
+```
+src/
+├── components/
+│   ├── ui/               # shadcn/ui components
+│   ├── forms/            # Form-related components
+│   ├── layout/           # Layout components
+│   └── features/         # Feature-specific components
+├── hooks/                # Custom React hooks
+├── lib/                  # Utility functions and configurations
+├── styles/               # Global styles and Tailwind utilities
+├── types/                # TypeScript type definitions
+└── examples/             # Full example implementations
+    ├── auth/
+    ├── forms/
+    ├── layouts/
+    └── animations/
+
+docs/                     # Documentation and usage examples
+└── snippets/            # Code snippet documentation
+```
+
+## 🚀 Getting Started
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+git clone https://github.com/yourusername/nextjs-code-collection.git
+```
+
+2. Install dependencies:
+```bash
+bun install
+```
+
+3. Run the development server:
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤝 Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Contribution Guidelines
 
-## Learn More
+1. Create a new branch for your feature
+2. Follow the existing code style and conventions
+3. Add documentation and examples for new components
+4. Test your changes thoroughly
+5. Submit a pull request
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🙏 Acknowledgments
 
-## Deploy on Vercel
+- [Next.js Documentation](https://nextjs.org/docs)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ by Alex Sherbin
