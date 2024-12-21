@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Navbar } from '@/components/layout/navbar';
+import { ThemeProvider } from '@/components/providers/theme-provider';
 import { SITE_CONFIG } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { Inter } from 'next/font/google';
@@ -34,8 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(inter.className, 'min-h-screen bg-background')}>
-        <Navbar />
-        {children}
+        <ThemeProvider>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
