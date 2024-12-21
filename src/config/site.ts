@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: 'Next.js Code Snippets',
   description: 'A collection of reusable Next.js components, hooks, and utilities',
-  url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+  url: process.env.NEXT_PUBLIC_APP_URL || 'https://nextjs-code-snippets-psi.vercel.app/',
   ogImage: '/og.jpg',
   links: {
     twitter: 'https://twitter.com/Nupogodi_dev',
